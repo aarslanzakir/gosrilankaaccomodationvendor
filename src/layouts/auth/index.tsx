@@ -4,6 +4,8 @@ import { Link, Routes, Route, Navigate } from "react-router-dom";
 import FixedPlugin from "components/fixedPlugin/FixedPlugin";
 import SignIn from "views/auth/SignIn"; 
 import SignUp from "views/auth/SignUp"; 
+import ForgotPassword from "views/auth/ForgotPassword";
+import SetPassword from "views/auth/SetPassword";
 
 export default function Auth() {
 
@@ -18,6 +20,8 @@ export default function Auth() {
                 <Routes>
                   <Route path="/sign-in" element={<SignIn />} />
                       <Route path="/sign-up" element={<SignUp />} /> 
+                      <Route path="/forgot-password" element={<ForgotPassword />} /> 
+                      <Route path="/set-password" element={<SetPassword />} /> 
 
                   <Route path="/" element={<Navigate to="/auth/sign-in" replace />} />
                 </Routes>
