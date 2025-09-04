@@ -81,13 +81,16 @@ export default function SignIn() {
         </div>
 
         {/* Right side - Image (desktop only) */}
-        <div className="hidden w-full md:flex md:w-1/2 items-center justify-center bg-gray-50">
-          <img
-            src={authImg}
-            alt="auth visual"
-            className="w-full max-h-screen object-contain"
-          />
-        </div>
+       {/* Right side - Image (desktop only) */}
+<div className="hidden w-full md:flex md:w-1/2 items-center justify-center">
+  <img
+    src={authImg}
+    alt="auth visual"
+    className="max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg max-h-[75%] object-contain"
+  />
+</div>
+
+
       </div>
     </div>
   );
