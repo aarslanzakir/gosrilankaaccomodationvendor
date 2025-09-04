@@ -1,7 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import authImg from "assets/img/auth/LoginImg.png";
 
 export default function SignIn() {
+    const navigate = useNavigate();
+
+  const handleLogin = () => {
+    // You can add authentication logic here
+    // If login is successful, navigate to admin-default
+    navigate("/admin/default");
+  };
+  
   return (
     <div className="flex h-screen w-full items-center justify-center bg-white dark:bg-navy-900 px-4">
       <div className="flex w-full max-w-5xl flex-col overflow-hidden rounded-2xl md:flex-row">
@@ -64,7 +72,9 @@ export default function SignIn() {
           </div>
 
           {/* Login button */}
-          <button className="mb-4 w-full rounded-md bg-gradient-to-r from-teal-600 to-gray-700 py-2 text-white hover:opacity-90">
+          <button 
+          onClick={handleLogin}
+          className="mb-4 w-full rounded-md bg-gradient-to-r from-teal-600 to-gray-700 py-2 text-white hover:opacity-90">
             Login
           </button>
 

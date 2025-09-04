@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import navbarimage from "assets/img/layout/Navbar.png";
 import { BsArrowBarUp } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
+import { useNavigate } from "react-router-dom"; // import useNavigate
+
 import { RiMoonFill, RiSunFill } from "react-icons/ri";
 import {
   IoMdNotificationsOutline,
@@ -19,6 +21,13 @@ const Navbar = (props: {
 }) => {
   const { onOpenSidenav, brandText } = props;
   const [darkmode, setDarkmode] = React.useState(false);
+  const navigate = useNavigate(); // initialize navigate
+
+ const handleLogout = () => {
+    // Optional: clear any auth tokens here
+    navigate("/auth/sign-in"); // redirect to sign-in page
+  };
+
 
   return (
     <nav className="sticky top-4 z-40 flex flex-row flex-wrap items-center justify-between rounded-xl bg-white/10 p-2 backdrop-blur-xl dark:bg-[#0b14374d]">
@@ -161,6 +170,8 @@ const Navbar = (props: {
   
                 <a
                   href=" "
+                 onClick={handleLogout}
+
                   className="mt-3 text-sm font-medium text-red-500 hover:text-red-500"
                 >
                   Log Out

@@ -2,8 +2,8 @@ import Footer from "components/footer/FooterAuthDefault";
 import authImg from "assets/img/auth/auth.png";
 import { Link, Routes, Route, Navigate } from "react-router-dom";
 import FixedPlugin from "components/fixedPlugin/FixedPlugin";
-import SignIn from "views/auth/SignIn"; // ✅ import SignIn directly
-import SignUp from "views/auth/SignUp"; // ✅ import SignIn directly
+import SignIn from "views/auth/SignIn"; 
+import SignUp from "views/auth/SignUp"; 
 
 export default function Auth() {
 
@@ -17,7 +17,7 @@ export default function Auth() {
              
                 <Routes>
                   <Route path="/sign-in" element={<SignIn />} />
-                      <Route path="/sign-up" element={<SignUp />} /> {/* ✅ new SignUp route */}
+                      <Route path="/sign-up" element={<SignUp />} /> 
 
                   <Route path="/" element={<Navigate to="/auth/sign-in" replace />} />
                 </Routes>
